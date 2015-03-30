@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Week5_Oef5_Bitcoin</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bedrag_in_€">Uw bedrag in €:</string>
+    <string name="naar_bitcoin">Naar Bitcoin</string>
+    <string name="naar_euro">Naar Euro</string>
+    <string name="wijzig_koers"><![CDATA[Wijzig koers Euro -> Bitcoin]]></string>
+    <string name="wijzig">Wijzigen</string>
+</resources>

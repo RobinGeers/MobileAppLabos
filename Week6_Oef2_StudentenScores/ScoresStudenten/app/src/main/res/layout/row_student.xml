@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageViewStudent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/student_green"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steven"
+        android:id="@+id/textViewStudentVoorNaam"
+        android:layout_alignTop="@+id/imageViewStudent"
+        android:layout_toEndOf="@+id/imageViewStudent"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verborgh"
+        android:id="@+id/textViewStudentNaam"
+        android:layout_alignTop="@+id/textViewStudentVoorNaam"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="steven.verborgh@howest.be"
+        android:id="@+id/textViewStudentEmail"
+        android:layout_below="@+id/textViewStudentVoorNaam"
+        android:layout_alignStart="@+id/textViewStudentVoorNaam"
+        android:layout_marginTop="5dp"
+        android:textIsSelectable="false"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:id="@+id/textViewScore"
+        android:layout_alignBottom="@+id/imageViewStudent"
+        android:layout_alignStart="@+id/textViewStudentEmail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:id="@+id/textViewStudentScore"
+        android:layout_alignTop="@+id/textViewScore"
+        android:layout_alignStart="@+id/textViewStudentNaam"/>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Week4_Oef1_LaunchingExplicitIntents</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_explicit">ExplicitActivity</string>
+    <string name="explicit_activity">Explicit activity</string>
+    <string name="jouw_score">Jouw score</string>
+</resources>

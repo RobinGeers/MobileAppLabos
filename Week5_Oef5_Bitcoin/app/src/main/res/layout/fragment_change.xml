@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="be.howest.nmct.ChangeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bedrag_in_€"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextEuro"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:hint="0 euro"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/editTextEuro"
+        android:layout_alignStart="@+id/editTextEuro"
+        android:id="@+id/linearLayout">
+
+        <!-- Custom button aangemaakt in de map 'Drawable'
+             Daarna in de map 'values' -> bestand Styles.xml aangevuld !-->
+        <Button
+            style="@style/CustomStyleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/naar_bitcoin"
+            android:id="@+id/btnNaarBitcoin"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/arrow_down"
+            android:layout_marginLeft="20dp"
+            android:padding="15dp"/>
+
+        <Button
+            style="@style/CustomStyleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/naar_euro"
+            android:id="@+id/btnNaarEuro"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/arrow_up"
+            android:layout_marginLeft="20dp"
+            android:padding="15dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uw bedrag in Bitcoin:"
+        android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignEnd="@+id/editTextEuro"
+        android:layout_alignStart="@+id/linearLayout"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextBitcoin"
+        android:layout_below="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:hint="0 bitcoin"
+        android:layout_alignStart="@+id/textView2"/>
+
+    <Button
+        style="@style/CustomStyleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wijzig_koers"
+        android:id="@+id/btnWijzigKoers"
+        android:layout_gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editTextBitcoin"
+        android:layout_alignEnd="@+id/editTextBitcoin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1 Bitcoin = €--.-"
+        android:id="@+id/textViewResult"
+        android:layout_above="@+id/btnWijzigKoers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

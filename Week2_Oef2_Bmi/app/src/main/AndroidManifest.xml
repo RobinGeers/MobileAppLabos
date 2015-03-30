@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="be.howest.nmct.week2_oef2_bmi" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".BmiActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- Noodzakelijk om Implicit intent te kunnen ontvangen !-->
+                <action android:name="be.howest.nmct.week2_oef2_bmi.intent.action.BMI" />
+
+                <!-- Noodzakelijk om Implicit intent te kunnen ontvangen !-->
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <!-- Noodzakelijk om Implicit intent te kunnen ontvangen !-->
+                <category android:name="be.howest.nmct.week2_oef2_bmi.intent.action.BMI" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

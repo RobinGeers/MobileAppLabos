@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uw gegevens"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNaam"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView"
+        android:hint="Uw naam"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextVoorNaam"
+        android:layout_below="@+id/editTextNaam"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editTextNaam"
+        android:hint="Uw voornaam"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Geboortejaar:"
+        android:id="@+id/textViewGeboortejaar"
+        android:layout_below="@+id/editTextVoorNaam"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecteer uw geboortejaar"
+        android:id="@+id/buttonSelecteerGeboortejaar"
+        android:layout_below="@+id/textViewGeboortejaar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecteer uw horoscoop"
+        android:id="@+id/buttonSelecteerHoroscoop"
+        android:layout_below="@+id/buttonSelecteerGeboortejaar"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/buttonSelecteerGeboortejaar"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageViewResultaatHoroscoop"
+        android:layout_below="@+id/buttonSelecteerHoroscoop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="be.howest.nmct.week2_oef1_stopafstand.StopafstandSlider">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selecteer_uw_snelheid"
+        android:id="@+id/textViewSnelheid"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSnelheid"
+        android:layout_below="@+id/textViewSnelheid"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selecteer_uw_reactietijd"
+        android:id="@+id/textViewReactietijd"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/editTextSnelheid"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextReactietijd"
+        android:layout_below="@+id/textViewReactietijd"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selecteer_wegtype"
+        android:id="@+id/textViewWegtype"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editTextReactietijd"
+        android:layout_alignEnd="@+id/textViewReactietijd" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="180dp"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textViewWegtype"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Het wegdek ligt droog"
+            android:id="@+id/rdbDroog" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Het wegdek ligt nat"
+            android:id="@+id/rdbNat" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="De stopafstand is:"
+        android:id="@+id/textViewStopafstand"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewResultaat"
+        android:layout_below="@+id/textViewStopafstand"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bereken de stopafstand"
+        android:id="@+id/btnBereken"
+        android:layout_below="@+id/textViewWegtype"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarSnelheid"
+        android:layout_above="@+id/textViewReactietijd"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarReactietijd"
+        android:layout_alignTop="@+id/editTextReactietijd"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSliderSnelheid"
+        android:layout_below="@+id/editTextSnelheid"
+        android:layout_centerHorizontal="true"
+        android:text="-- km/h" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSliderReactietijd"
+        android:layout_below="@+id/seekBarReactietijd"
+        android:layout_centerHorizontal="true"
+        android:text="-- seconden" />
+
+
+</RelativeLayout>

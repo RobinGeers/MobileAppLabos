@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageViewHoroscoop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/boogschutter"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naam"
+        android:id="@+id/textViewNaamHoroscoop"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageViewHoroscoop"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- 'Focusable' en 'FocusableInTouchMode' Zorgen ervoor dat je op een ListViewItem kan klikken !-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info.."
+        android:id="@+id/buttonInfo"
+        android:layout_alignTop="@+id/imageViewHoroscoop"
+        android:layout_alignParentEnd="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+</RelativeLayout>

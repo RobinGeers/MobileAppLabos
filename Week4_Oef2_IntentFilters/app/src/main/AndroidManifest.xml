@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="be.howest.nmct.intentfiltersproject" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ImplicitActivity"
+            android:label="@string/title_activity_implicit" >
+            <intent-filter>
+                <action android:name="be.howest.nmct.intentfiltersproject.intent.action.IMPLY" />
+
+               <!--<data android:scheme="xtp" />-->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <category android:name="android.intent.category.CAR_DOCK"/> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SecondImplicitActivity"
+            android:label="@string/title_activity_second_implicit" >
+
+            <intent-filter>
+                <action android:name="be.howest.nmct.intentfiltersproject.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Als je in de browser surft naar dit www.kortrijk.be/nieuws, zal deze app openen -->
+                <data
+                    android:host="www.kortrijk.be"
+                    android:path="/nieuws"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
